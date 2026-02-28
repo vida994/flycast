@@ -17,6 +17,9 @@ dist
 .env.local
 .env.*.local
 
+# Demo cheatsheet (personal, not for repo)
+DEMO-CHEATSHEET.md
+
 # Misc
 .DS_Store
 *.pem
