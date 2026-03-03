@@ -1,0 +1,14 @@
+---
+description: Core Flycast project context and constraints
+alwaysApply: true
+---
+
+# Flycast Project Context
+
+**What it is:** Real-time announcement board for live demo at Cursor Meetup Split (March 3, 2026). Admin writes or dictates messages; audience sees them instantly via QR code.
+
+**Tech stack:** Next.js 16 (App Router), TypeScript strict, Supabase (Notical project), Tailwind v4, Web Speech API.
+
+**Out of scope (MVP):** Message categories, delete, expiry, push notifications, dark mode, Supabase auth, AI features beyond speech-to-text. Do not add these unless explicitly requested.
+
+**Spec reference:** Full technical spec at `~/Desktop/flycast-technical-spec.md` — consult for detailed behavior, routes, and schema.

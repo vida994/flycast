@@ -1,0 +1,31 @@
+---
+description: Flycast design guidelines and visual system
+globs: "**/*.tsx"
+alwaysApply: false
+---
+
+# Flycast Design Guidelines
+
+**Overall feel:** Light, clean, airport-inspired. Departure boards meet modern web design. Every element earns its space.
+
+**Colors:**
+- Background: white or very light gray (#FAFAFA)
+- Text: dark gray/near-black (#1A1A1A)
+- Accent: airport blue (#0066CC) or warm amber (#F59E0B)
+- Cards: white with subtle border or shadow
+
+**Typography:**
+- Font: Inter or Geist Sans
+- Messages: at least 18px on mobile (large, readable)
+- Timestamps: smaller, muted text
+
+**Layout:**
+- Mobile-first responsive
+- Single column, full-width message cards
+- Admin: compose area sticky at top on desktop
+
+**Animations:**
+- New messages: slide in from top with subtle fade
+- Keep minimal and smooth — no flashy transitions
+
+**Empty state:** "No announcements yet. Stay tuned." with a subtle plane icon.

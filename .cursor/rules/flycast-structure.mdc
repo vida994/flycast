@@ -1,0 +1,37 @@
+---
+description: Flycast project structure and component naming
+alwaysApply: true
+---
+
+# Flycast Project Structure
+
+Follow the structure from the technical spec:
+
+```
+flycast/
+├── app/
+│   ├── layout.tsx              # Root layout
+│   ├── page.tsx                # Public board (/)
+│   ├── admin/
+│   │   ├── page.tsx            # Admin dashboard (/admin)
+│   │   └── qr/
+│   │       └── page.tsx        # QR code display (/admin/qr)
+│   └── globals.css             # Tailwind global styles
+├── components/
+│   ├── MessageCard.tsx         # Single message display
+│   ├── MessageFeed.tsx         # Real-time message list
+│   ├── ComposeMessage.tsx      # Text input + dictate + send
+│   ├── MessageHistory.tsx     # Admin message history with edit
+│   ├── PasswordGate.tsx        # Simple password prompt
+│   ├── QRCodeDisplay.tsx      # QR code generator
+│   └── SpeechToText.tsx        # Web Speech API component
+├── hooks/
+│   └── useRealtimeMessages.ts  # Shared Supabase subscription + connection state
+├── lib/
+│   ├── supabase.ts            # Supabase client initialization
+│   └── types.ts               # TypeScript types
+├── actions/
+│   └── auth.ts                # Server Action: verify admin password
+```
+
+Use these exact component names. Place new logic in the appropriate folder.

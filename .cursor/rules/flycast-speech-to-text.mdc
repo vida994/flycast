@@ -1,0 +1,22 @@
+---
+description: Web Speech API implementation for Flycast
+globs: "**/SpeechToText*.tsx"
+alwaysApply: false
+---
+
+# Flycast Speech-to-Text
+
+**API:** `window.SpeechRecognition` or `window.webkitSpeechRecognition`
+- Continuous: `false` (stops after one utterance)
+- Interim results: `true` (show text as it's being spoken)
+
+**Language switcher:** English (en-US) default, Croatian (hr-HR). Set `recognition.lang` before starting.
+
+**UI states:**
+- Idle: microphone icon (outline)
+- Listening: pulsing microphone icon (filled), visual feedback
+- Error: show toast if unsupported
+
+**Fallback:** If browser doesn't support Web Speech API, hide dictate button. Tooltip: "Speech-to-text requires a Chromium-based browser (Chrome, Edge, Opera)."
+
+**Flow:** Transcribed text fills input; user can edit before sending.

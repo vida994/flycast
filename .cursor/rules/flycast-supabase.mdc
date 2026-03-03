@@ -1,0 +1,23 @@
+---
+description: Supabase and real-time patterns for Flycast
+globs: "**/{supabase,hooks,lib}/**"
+alwaysApply: false
+---
+
+# Flycast Supabase & Realtime
+
+**Table:** `flycast_messages` — columns: `id` (uuid), `text` (text), `created_at` (timestamptz), `updated_at` (timestamptz).
+
+**Project:** Notical (ref: `sapnppmzywwuhqdiaicf`). Link with `supabase link --project-ref sapnppmzywwuhqdiaicf`.
+
+**Shared hook:** `useRealtimeMessages` in `hooks/useRealtimeMessages.ts`:
+- Fetches messages ordered by `created_at` desc on mount
+- Subscribes to Supabase Realtime on `flycast_messages`
+- On INSERT: prepend new message
+- On UPDATE: update edited message in list
+- Unsubscribe on unmount
+- Returns `{ messages, connectionStatus }`
+
+**Connection feedback:** Show "Reconnecting..." when `connectionStatus === 'disconnected'`.
+
+**Migrations:** `supabase/migrations/`. Apply with `supabase db push`. Create with `supabase migration new <name>`.

@@ -1,0 +1,13 @@
+---
+description: Tailwind v4 configuration for Flycast
+globs: "**/*.css"
+alwaysApply: false
+---
+
+# Flycast Tailwind v4
+
+**Version:** Tailwind CSS v4 — CSS-first config.
+
+**No `tailwind.config` file.** Use `@theme` in CSS for theme configuration.
+
+**Example:** Define colors, fonts, etc. in `globals.css` via `@theme` blocks instead of `tailwind.config.js`.

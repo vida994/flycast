@@ -1,0 +1,20 @@
+---
+description: Admin authentication pattern for Flycast
+globs: "**/{admin,actions}/**"
+alwaysApply: false
+---
+
+# Flycast Admin Auth
+
+**Pattern:** Simple password gate — no Supabase auth.
+
+**Server Action** (`actions/auth.ts`):
+- Client sends entered password
+- Server compares to `ADMIN_PASSWORD` env var
+- Never expose `ADMIN_PASSWORD` to the client
+
+**On success:** Store flag in `sessionStorage` to persist access for the session.
+
+**Components:** `PasswordGate` wraps admin content. On success, show admin dashboard.
+
+**Admin routes:** `/admin` (dashboard), `/admin/qr` (QR code display). Both protected by the same gate.
